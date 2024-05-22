@@ -184,9 +184,33 @@ nav a.active {
 /* Achievements Section */
 #achievements {
   padding: 2rem;
-  background: repeating-linear-gradient(45deg, #222, #222 10px, #333 10px, #333 20px);
-  background-size: 20px 20px; /* Adjust size for a finer or coarser pattern */
-  box-shadow: inset 0 0 10px #00ff00; /* Add an inset green glow for more depth */
+  background-color: black; /* Black background */
+  box-shadow: inset 0 0 15px #00ff00; /* Add an inset green glow for more depth */
+}
+
+#achievements-content {
+  display: grid;               /* Use CSS Grid for card layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 2rem;
+}
+
+/* Card Styling */
+.achievement-card {  /* Style each achievement as a card */
+  background-color: #222;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 15, 0, 0.3); /* Greenish shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 15, 0, 0.5); 
+}
+
+.achievement-card h3 {
+  color: #0f0;
+  margin-bottom: 0.5rem;
 }
 
 #achievements h2 {
