@@ -373,22 +373,28 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 99; 
-    font-size: 18px; 
+    z-index: 9999; /* Ensure it's above most elements */
+    font-size: 20px;   /* Slightly larger font size */
     border: none;
     outline: none;
-    background-color: #0f0; /* Green background */
-    color: #000; /* Black text */
+    background-color: transparent; /* Transparent background */
+    color: #0f0;  /* Neon Green text */
     cursor: pointer;
-    padding: 15px; 
-    border-radius: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;  
+    border-radius: 50%;   /* Make it a circle */
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 15, 0, 0.8); /* Green glow */
+}
+
+#scrollToTopBtn i { /* Style the Font Awesome icon */
+    font-size: 1.2em;  
 }
 
 #scrollToTopBtn:hover {
-    background-color: #00FF00; /* Brighter green on hover */
-    transform: translateY(-2px);
+    background-color: #0f0;    /* Neon green background on hover */
+    color: #000;               /* Black text on hover */
+    box-shadow: 0 0 15px #0f0; /* Stronger glow on hover */
+    transform: scale(1.1);     /* Slight zoom on hover */
 }
 
 /* Show the button when scrolling down */
