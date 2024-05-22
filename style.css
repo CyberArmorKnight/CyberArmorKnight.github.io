@@ -88,29 +88,28 @@ nav a.active {
     order: 2; /* Ensure image comes second in the source order */
 }
 /* Achievements Section */
-#achievements {
-    padding: 2rem;
-    display: flex; /* Enable flexbox for centering */
-    flex-direction: column; /* Arrange content vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; 
-    background: repeating-linear-gradient(45deg, #222, #222 10px, #333 10px, #333 20px); /* Subtle repeating pattern */
-}
-
-/* ... (rest of your achievements styling) ... */
-
-/* Menu Buttons (Consistent Styling) */
-#achievements-menu a.menu-button { 
-    background-color: #333; /* Darker gray background */
-    color: #0f0; /* Green text */
-    border: 2px solid #0f0;
-    border-radius: 5px;
-    padding: 0.75rem 1.25rem;
+#achievements-menu a.menu-button {
+    background-color: #333;        /* Darker gray background */
+    color: #0f0;                   /* Green text */
+    border: 2px solid #0f0;         
+    border-radius: 10px;            /* Increased border-radius for a more rounded look */
+    padding: 1rem 1.5rem;          /* Increased padding for more comfortable click area */
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-shadow: 0 0 3px #0f0; /* Subtle glow */
+    text-shadow: 0 0 3px #0f0;
+    box-shadow: 0 2px 5px rgba(0, 15, 0, 0.5); /* Subtle green shadow */
+    flex: 1;                        /* Allow buttons to grow and take equal space */ 
+    margin: 5px;                   /* Add margin for spacing */
+}
+
+/* Hover Effects (Same as before) */
+#achievements-menu a.menu-button:hover {
+    background-color: #555;       
+    color: #fff;                  
+    transform: translateY(-2px);  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /* ... (hover styles remain the same) ... */
