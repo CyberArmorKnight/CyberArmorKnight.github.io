@@ -61,6 +61,43 @@ nav a.active {
     transition: background-color 0.3s ease; /* Smooth transition */
     border-radius: 5px; /* Add rounded corners */
 }
+/* ... (other styles) ... */
+
+#achievements-menu a.menu-button {
+    /* Button-like Styling */
+    display: inline-block; /* Make the <a> element behave like a block-level element */
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark gray text */
+    border: none;
+    padding: 0.75rem 1.25rem;
+    text-align: center; /* Center text within the button */
+    text-decoration: none; /* Remove underline from link */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+/* ... (other styles) ... */
+
+#achievements-menu a.menu-button {
+    /* ... (Existing Button Styles) ... */
+}
+
+#achievements-menu a.menu-button:hover {
+    /* Hover Effects */
+    background-color: #555;       /* Darker grey background on hover */
+    color: #fff;                  /* White text on hover */
+    transform: translateY(-2px);  /* Slight upward movement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+
+
+#achievements-menu a.menu-button:hover,
+#achievements-menu a.menu-button.active {
+    background-color: #333; /* Dark gray background on hover or active */
+    color: #fff; /* White text on hover or active */
+}
 
 #achievements-menu button:hover,
 #achievements-menu button.active {
