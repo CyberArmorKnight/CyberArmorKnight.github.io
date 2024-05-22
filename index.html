@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>CyberArmorKnight | Cybersecurity Engineer</title>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script> <title>CyberArmorKnight | Cybersecurity Engineer</title>
 </head>
 <body>
     <header>
         <div id="logo">
-            <h1>CyberArmorKnight</h1>
+            <h1>CyberArmorKnight</h1> 
         </div>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About Me</a>
-            <a href="#achievements">Achievements</a>
-            <a href="blog.html">Blog</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="active">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#achievements">ACHIEVEMENTS</a>
+            <a href="blog.html">BLOG</a>
+            <a href="#contact">CONTACT</a>
         </nav>
     </header>
 
@@ -27,15 +27,55 @@
         </section>
 
     <section id="achievements">
+        <h2>ACHIEVEMENTS</h2>
         <div id="achievements-menu">
-            </div>
+            <button class="active" onclick="showAchievements('projects')">Projects</button>
+            <button onclick="showAchievements('publications')">Publications</button>
+            <button onclick="showAchievements('certifications')">Certifications</button>
+            <button onclick="showAchievements('copyrights')">Copyrights</button>
+            <button onclick="showAchievements('patents')">Patents</button>
+            <button onclick="showAchievements('awards')">Awards</button>
+            <button onclick="showAchievements('researchGrants')">Research Grants</button>
+        </div>
         <div id="achievements-content">
-            </div>
+        </div>
     </section>
 
     <section id="contact">
-        </section>
+        <h2>CONTACT</h2>
+        <div class="contact-tabs">
+            <button class="active" onclick="showContactTab('message')">Send Message Us</button>
+            <button onclick="showContactTab('touch')">Get in Touch</button>
+        </div>
 
+        <div id="message-tab" class="contact-tab-content">
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="subject" placeholder="Subject">
+                <textarea id="message" placeholder="Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div id="touch-tab" class="contact-tab-content" style="display: none;">
+            <h3>Dr. Nilakshi Jain</h3>
+            <p>Head of Cyber Security Department<br>
+                EC Council Instructor Professor<br>
+                SAKEC Research Cell Chairman<br>
+                Shah and Anchor Kutchhi Engineering College, Chembur.<br>
+                Mumbai</p>
+            <p>+91 9967039388<br>
+                nilakshijain1986@gmail.com<br>
+                nilakshi.jain@sakec.ac.in</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
     <footer>
         </footer>
 
