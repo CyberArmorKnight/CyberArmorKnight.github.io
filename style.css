@@ -1,84 +1,54 @@
 /* Overall Styling */
 body {
-    font-family: 'CyberpunkFont', sans-serif; /* Or choose another tech-inspired font */
+    font-family: 'CyberpunkFont', sans-serif;
     margin: 0;
-    background-color: #111; /* Dark background */
-    color: #f0f0f0; /* Light text color */
-    overflow-x: hidden; /* Prevent horizontal scrolling for background effects */
+    background-color: #111;
+    color: #f0f0f0;
+    overflow-x: hidden; 
+}
+
+h1, h2, h3 { 
+    font-weight: bold;
+    letter-spacing: 0.15em;
 }
 
 /* Header */
 header {
-    background: linear-gradient(45deg, #000, #222); /* Subtle gradient */
-    color: #0f0; /* Green text */
-    padding: 1rem 0;
+    background: linear-gradient(45deg, #000, #222);
+    color: #0f0;
+    padding: 0.5rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    text-shadow: 0 0 5px #0f0; /* Glow on text */
-    position: fixed; /* Make the header stay fixed at the top */
-    top: 0;          /* Position it at the top of the viewport */
-    left: 0;         /* Position it at the left of the viewport */
-    width: 100%;     /* Ensure it takes up the full width */
-    z-index: 1000;   /* Make sure it's above other content */
+    text-shadow: 0 0 5px #0f0;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-/* Universal Scrollbar (Chrome, Edge, Safari, Opera) */
-* {
-  scrollbar-width: thin;        /* Smaller scrollbar width */
-  scrollbar-color: #0f0 #222;  /* Green thumb, dark grey track */
-}
-
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #0f0 #222;
-}
-
-/* Internet Explorer and Edge Legacy (Fallback) */
-body {
-  -ms-overflow-style: none;   /* Hide the default IE/Edge scrollbar */
-}
-
-/* Scroll Snap (for smoother scrolling in modern browsers) */
-html {
-  scroll-behavior: smooth;     /* Enable smooth scrolling on the entire page */
-}
-
-/* Optional Scroll Snap for specific elements */
-section {
-  scroll-snap-type: y mandatory; /* Snap to vertical elements within this section */
-  scroll-padding: 1rem;         /* Add padding around the snapped element */
-}
 #logo h1 {
     margin: 0;
-    font-size: 2.8rem;
-    font-weight: bold;
-    letter-spacing: 0.15em; /* More spacing for a tech feel */
-    text-transform: uppercase;
-}
-
-/* Navigation */
-nav {
-    display: flex;
+    font-size: 2rem; 
 }
 
 nav a {
-    color: #0f0; /* Green links */
+    color: #0f0; 
     text-decoration: none;
-    margin: 0 1rem;
-    padding: 0.5rem 1rem;
-    border: 2px solid #0f0; /* Neon green border */
+    margin: 0 0.5rem;  
+    padding: 0.3rem 0.8rem;
+    border: 2px solid #0f0; 
     border-radius: 5px;
-    transition: all 0.3s ease; /* Smoother transition on hover */
-    text-shadow: 0 0 3px #0f0; /* Subtle glow */
+    transition: all 0.3s ease; 
+    text-shadow: 0 0 3px #0f0;
 }
 
 nav a:hover {
-    background-color: #0f0; 
+    background-color: #0f0;
     color: #111;
-    box-shadow: 0 0 10px #0f0; /* Strong glow on hover */
+    box-shadow: 0 0 10px #0f0;
 }
 
 nav a.active {
@@ -86,13 +56,26 @@ nav a.active {
     color: #111;
 }
 
+/* Content Sections (General) */
+#home, #about, #skills, #services, #achievements, #contact {
+    padding-top: 60px; /* Adjust for header height */
+    text-align: center; 
+}
+
+/* Home Section */
+#home {
+    /* ... your styles for the home section */
+}
+
+/* About Section */
 #about {
-    /* Existing styles */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Ensure vertical centering of content */
-    text-align: justify;     /* Align text to both left and right margins */
+    justify-content: center;
+    text-align: justify;
+    background-color: #111;
+    padding: 3rem 0;
 }
 
 .about-container {
@@ -101,84 +84,118 @@ nav a.active {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 2rem;
-    flex-direction: row-reverse; /* Reverse the order of flex items */
+    flex-direction: row-reverse; 
 }
 
+.about-image {
+    flex: 1;
+    max-width: 250px;
+    margin-left: 2rem;
+    order: 2; 
+}
 
-/* About Content (Now on the Left) */
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 15, 0, 0.5); 
+}
+
 .about-content {
     flex: 2;
     line-height: 1.6;
-    padding-left: 2rem; /* Add padding to the left side */
-    order: 1; /* Ensure content comes first in the source order */
+    padding-left: 2rem; 
+    order: 1; 
 }
-/* About Image (Now on the Right) */
-.about-image {
-    flex: 1;
-    max-width: 250px; /* Reduced image size */
-    margin-left: 2rem;
-    order: 2; /* Ensure image comes second in the source order */
+
+.about-content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem; 
 }
+
+.about-content a {
+    color: #0f0; 
+    text-decoration: underline;
+}
+
+/* Skills Section */
+#skills {
+    /* ... your styles for the skills section */
+}
+
+/* Services Section */
+#services {
+    /* ... your styles for the services section */
+}
+
 /* Achievements Section */
+#achievements {
+    padding: 2rem;
+    background: repeating-linear-gradient(45deg, #222, #222 10px, #333 10px, #333 20px); /* Subtle repeating pattern */
+}
+
+#achievements h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0; /* Glow effect */
+}
+
+#achievements-menu {
+    display: flex; 
+    justify-content: center; 
+    gap: 1rem;
+}
+
+/* Menu Buttons (Consistent Styling) */
 #achievements-menu a.menu-button {
-    background-color: #333;        /* Darker gray background */
-    color: #0f0;                   /* Green text */
+    background-color: #333;        
+    color: #0f0;                   
     border: 2px solid #0f0;         
-    border-radius: 10px;            /* Increased border-radius for a more rounded look */
-    padding: 1rem 1.5rem;          /* Increased padding for more comfortable click area */
+    border-radius: 10px;            
+    padding: 1rem 1.5rem;          
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
     text-shadow: 0 0 3px #0f0;
-    box-shadow: 0 2px 5px rgba(0, 15, 0, 0.5); /* Subtle green shadow */
-    flex: 1;                        /* Allow buttons to grow and take equal space */ 
-    margin: 5px;                   /* Add margin for spacing */
+    box-shadow: 0 2px 5px rgba(0, 15, 0, 0.5); 
+    flex: 1;                        
+    margin: 5px;                   
 }
-
-/* Hover Effects (Same as before) */
-#achievements-menu a.menu-button:hover {
-    background-color: #555;       
-    color: #fff;                  
-    transform: translateY(-2px);  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-/* ... (hover styles remain the same) ... */
 
 
 /* Contact Section */
 #contact {
-    background-color: #111; /* Dark background */
-    color: #0f0; /* Green text color */
+    background-color: #111;
+    color: #0f0; 
     padding: 2rem;
 }
 #contact h2 {
-    text-align: center; /* Center the title */
+    text-align: center; 
 }
 
 .contact-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-around; /* Distribute tabs evenly */
+    display: flex; 
+    justify-content: space-around; 
     gap: 20px;
-    flex-wrap: wrap; /* Allow wrapping to next line on smaller screens */
+    flex-wrap: wrap; 
 }
 
 .contact-tab-content {
-    background-color: #222; /* Slightly lighter background for content */
+    background-color: #222; 
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 15, 0, 0.3); /* Greenish shadow */
-    flex: 1;  /* Allow tabs to grow and shrink */
-    min-width: 300px; /* Minimum width for each tab */
+    box-shadow: 0 4px 8px rgba(0, 15, 0, 0.3); 
+    flex: 1;  
+    min-width: 300px; 
 }
 
 .contact-tab-content h2, .contact-tab-content h3 {
-    color: #0f0; /* Neon green for headings */
+    color: #0f0;
     text-align: center;
     margin-bottom: 1rem;
 }
-
 /* Form Styling */
 #contact-form input,
 #contact-form textarea {
@@ -195,26 +212,61 @@ nav a.active {
     border: none;
     padding: 0.75rem 1.25rem;
     cursor: pointer;
-    text-align: center;
     border-radius: 5px;
     font-weight: bold;
 }
 
-/* Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
 }
-
 .social-icons a {
     color: #0f0;
     margin: 0 0.5rem;
     font-size: 1.5rem;
-    transition: all 0.3s ease; /* Smoother transition on hover */
+    transition: all 0.3s ease; 
 }
 
 .social-icons a:hover {
-    transform: translateY(-2px); /* Lift effect on hover */
-    text-shadow: 0 0 5px #0f0; /* Glowing effect on hover */
+    transform: translateY(-2px); 
+    text-shadow: 0 0 5px #0f0; 
 }
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #000;
+    color: #0f0;
+}
+
+
+
+/* Responsive Design (Media Queries) */
+@media (max-width: 768px) {
+    /* ... your existing media query styles ... */
+}
+
+
+/* Scrollbar */
+/* Universal Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #0f0 #222;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #0f0 #222;
+}
+
+
+/* Internet Explorer and Edge Legacy (Fallback) */
+body {
+    -ms-overflow-style: none;
+}
+
