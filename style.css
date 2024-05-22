@@ -57,6 +57,10 @@ nav a.active {
 /* Achievements Section */
 #achievements {
     padding: 2rem;
+    display: flex; /* Enable flexbox for centering */
+    flex-direction: column; /* Arrange content vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; 
     background: repeating-linear-gradient(45deg, #222, #222 10px, #333 10px, #333 20px); /* Subtle repeating pattern */
 }
 
