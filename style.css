@@ -332,7 +332,6 @@ footer {
     padding: 1rem 0;  /* Adjust padding as needed */
     text-align: center;
     color: #0f0; /* Green text */
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
