@@ -55,74 +55,38 @@ nav a.active {
 }
 
 #about {
-    padding: 3rem 0;  /* Increased padding */
-    text-align: justify;
-    background-color: #111; /* Dark background */
-    color: #f0f0f0; /* Light text */
-}
-
-#about h2 {
-    text-align: center;
-    font-size: 2.8rem; /* Larger font size */
-    margin-bottom: 1.5rem;
-    color: #0f0; /* Neon green */
-    text-shadow: 0 0 10px #0f0; /* Glow effect */
+    /* Existing styles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Ensure vertical centering of content */
+    text-align: justify;     /* Align text to both left and right margins */
 }
 
 .about-container {
     display: flex;
     align-items: center;
-    max-width: 900px; /* Adjusted width */
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 2rem;
+    flex-direction: row-reverse; /* Reverse the order of flex items */
 }
 
-/* About Image */
-.about-image {
-    flex: 1;
-    max-width: 250px; /* Reduced image size */
-    margin-right: 2rem;
-}
 
-.about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 15, 0, 0.5); /* Greenish shadow */
-}
-
-/* About Content */
+/* About Content (Now on the Left) */
 .about-content {
     flex: 2;
     line-height: 1.6;
-    padding-right: 2rem; /* Added padding to the right side */
+    padding-left: 2rem; /* Add padding to the left side */
+    order: 1; /* Ensure content comes first in the source order */
 }
-
-.about-content p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem; /* Slightly larger font size */
+/* About Image (Now on the Right) */
+.about-image {
+    flex: 1;
+    max-width: 250px; /* Reduced image size */
+    margin-left: 2rem;
+    order: 2; /* Ensure image comes second in the source order */
 }
-
-.about-content a {
-    color: #0f0; /* Green link color */
-    text-decoration: underline;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Stack vertically on smaller screens */
-    }
-
-    .about-image {
-        max-width: 100%;
-        margin: 0 0 1rem 0;
-    }
-    .about-content {
-        padding-right: 0;
-    }
-}
-
 /* Achievements Section */
 #achievements {
     padding: 2rem;
