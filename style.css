@@ -368,4 +368,31 @@ footer p {
 body {
     -ms-overflow-style: none;
 }
+/* Scroll-to-Top Button */
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; 
+    font-size: 18px; 
+    border: none;
+    outline: none;
+    background-color: #0f0; /* Green background */
+    color: #000; /* Black text */
+    cursor: pointer;
+    padding: 15px; 
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
+#scrollToTopBtn:hover {
+    background-color: #00FF00; /* Brighter green on hover */
+    transform: translateY(-2px);
+}
+
+/* Show the button when scrolling down */
+body.showButton #scrollToTopBtn {
+    display: block;
+}
