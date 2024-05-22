@@ -119,7 +119,6 @@ nav a.active {
 }
 
 /* Skills Section */
-/* Skills Section */
 #skills {
     padding: 3rem 0;  
     text-align: center;  
@@ -184,8 +183,10 @@ nav a.active {
 
 /* Achievements Section */
 #achievements {
-    padding: 2rem;
-    background: repeating-linear-gradient(45deg, #222, #222 10px, #333 10px, #333 20px); /* Subtle repeating pattern */
+  padding: 2rem;
+  background: repeating-linear-gradient(45deg, #222, #222 10px, #333 10px, #333 20px);
+  background-size: 20px 20px; /* Adjust size for a finer or coarser pattern */
+  box-shadow: inset 0 0 10px #00ff00; /* Add an inset green glow for more depth */
 }
 
 #achievements h2 {
