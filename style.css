@@ -117,11 +117,46 @@ nav a.active {
 
 
 /* Contact Section */
+/* Contact Section */
 #contact {
-    background: url('path/to/your/background-image.jpg'); /* Add a background image (optional) */
-    background-size: cover;
-    background-position: center;
-    color: #fff; /* White text for contrast */
-    text-shadow: 0 0 5px #0f0; /* Green glow on text */
+    padding: 2rem;
+    background-color: #111; /* Dark background */
+    color: #f0f0f0; /* Light text color */
 }
+
+.contact-tabs {
+    /* ... your existing styles ... */
+}
+
+.contact-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Distribute tabs evenly */
+}
+
+.contact-tab-content {
+    width: 45%;  /* Each tab takes roughly half the width */
+    padding: 1rem; 
+}
+
+/* ... your existing styles ... */
+
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    margin-bottom: 0.5rem;
+    color: #0f0; /* Neon green */
+    text-decoration: none;
+}
+
+.social-icons i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
 /* ... (rest of your contact styling) ... */
