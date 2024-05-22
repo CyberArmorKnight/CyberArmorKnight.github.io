@@ -55,41 +55,73 @@ nav a.active {
 }
 
 #about {
-    /* Existing styles */
+    padding: 3rem 0;  /* Increased padding */
+    text-align: justify;
+    background-color: #111; /* Dark background */
+    color: #f0f0f0; /* Light text */
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 2.8rem; /* Larger font size */
+    margin-bottom: 1.5rem;
+    color: #0f0; /* Neon green */
+    text-shadow: 0 0 10px #0f0; /* Glow effect */
+}
+
+.about-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: justify;     
+    max-width: 900px; /* Adjusted width */
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-.about-card {
-    background-color: #222; /* Dark background for the card */
-    border-radius: 10px;  /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    padding: 2rem; /* Add padding around content */
-    max-width: 800px; /* Limit width for larger screens */
-    margin: 2rem auto; /* Center the card */
-}
-
+/* About Image */
 .about-image {
-    text-align: center; /* Center the image */
-    margin-bottom: 1rem; /* Add space below image */
+    flex: 1;
+    max-width: 250px; /* Reduced image size */
+    margin-right: 2rem;
 }
 
 .about-image img {
-    width: 200px;  
-    height: 200px; 
-    border-radius: 50%; /* Circular image */
-    object-fit: cover; /* Ensure image covers the circle */
-    border: 2px solid #0f0; /* Neon green border */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 15, 0, 0.5); /* Greenish shadow */
+}
+
+/* About Content */
+.about-content {
+    flex: 2;
+    line-height: 1.6;
+    padding-right: 2rem; /* Added padding to the right side */
 }
 
 .about-content p {
     margin-bottom: 1rem;
-    line-height: 1.6; /* Improve readability */
+    font-size: 1.1rem; /* Slightly larger font size */
 }
 
+.about-content a {
+    color: #0f0; /* Green link color */
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    .about-content {
+        padding-right: 0;
+    }
+}
 
 /* Achievements Section */
 #achievements {
