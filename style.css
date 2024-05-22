@@ -120,9 +120,12 @@ nav a.active {
 
 /* Skills Section */
 #skills {
-    padding: 3rem 0;  
-    text-align: center;  
-    background: repeating-linear-gradient(135deg, #222, #222 10px, #333 10px, #333 20px);
+  padding: 3rem 0;
+  text-align: center;  
+  background: repeating-linear-gradient(135deg, #000, #000 10px, #111 10px, #111 20px); /* Black with subtle pattern */
+  background-size: 20px 20px; 
+  box-shadow: inset 0 0 10px #00ff00; /* Inset green glow */
+   /* Set text color to white */
 }
 
 #skills h2 {
