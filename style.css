@@ -328,10 +328,18 @@ nav a.active {
 
 /* Footer */
 footer {
+    background-color: #111; /* Dark background */
+    padding: 1rem 0;  /* Adjust padding as needed */
     text-align: center;
-    padding: 1rem 0;
-    background-color: #000;
-    color: #0f0;
+    color: #0f0; /* Green text */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem; 
 }
 
 
