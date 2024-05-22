@@ -184,7 +184,7 @@ nav a.active {
 /* Achievements Section */
 #achievements {
   padding: 2rem;
-  background-color: black; /* Black background */
+  background-color: #222; /* Black background */
   box-shadow: inset 0 0 15px #00ff00; /* Add an inset green glow for more depth */
 }
 
