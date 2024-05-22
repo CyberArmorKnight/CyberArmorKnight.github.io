@@ -1,21 +1,21 @@
 /* Overall Styling */
 body {
-    font-family: 'CyberpunkFont', sans-serif;
+    font-family: 'CyberpunkFont', sans-serif; /* Replace with your actual Cyberpunk font */
     margin: 0;
-    background-color: #111;
-    color: #f0f0f0;
-    overflow-x: hidden; 
+    background-color: #000; /* Black background */
+    color: #f0f0f0; /* Light text color */
+    overflow-x: hidden; /* Prevent horizontal scrolling for background effects */
 }
 
-h1, h2, h3 { 
+h1, h2, h3 {
     font-weight: bold;
     letter-spacing: 0.15em;
 }
 
 /* Header */
 header {
-    background: linear-gradient(45deg, #000, #222);
-    color: #0f0;
+    background: linear-gradient(45deg, #000, #222); /* Subtle gradient */
+    color: #0f0; /* Green text */
     padding: 0.5rem 0;
     display: flex;
     justify-content: space-between;
@@ -31,17 +31,17 @@ header {
 
 #logo h1 {
     margin: 0;
-    font-size: 2rem; 
+    font-size: 2rem;
 }
 
 nav a {
-    color: #0f0; 
+    color: #0f0;
     text-decoration: none;
-    margin: 0 0.5rem;  
+    margin: 0 0.5rem;
     padding: 0.3rem 0.8rem;
-    border: 2px solid #0f0; 
+    border: 2px solid #0f0;
     border-radius: 5px;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
     text-shadow: 0 0 3px #0f0;
 }
 
@@ -58,13 +58,18 @@ nav a.active {
 
 /* Content Sections (General) */
 #home, #about, #skills, #services, #achievements, #contact {
-    padding-top: 60px; /* Adjust for header height */
-    text-align: center; 
+    padding-top: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Home Section */
 #home {
     /* ... your styles for the home section */
+    min-height: 100vh; 
 }
 
 /* About Section */
@@ -72,10 +77,10 @@ nav a.active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     text-align: justify;
-    background-color: #111;
-    padding: 3rem 0;
+    background-color: #111; 
+    padding: 3rem 0;  
 }
 
 .about-container {
@@ -84,22 +89,9 @@ nav a.active {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 2rem;
-    flex-direction: row-reverse; 
+    flex-direction: row-reverse;
 }
 
-.about-image {
-    flex: 1;
-    max-width: 250px;
-    margin-left: 2rem;
-    order: 2; 
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 15, 0, 0.5); 
-}
 
 .about-content {
     flex: 2;
@@ -118,48 +110,56 @@ nav a.active {
     text-decoration: underline;
 }
 
+.about-image {
+    flex: 1;
+    max-width: 250px; 
+    margin-left: 2rem;
+    order: 2; 
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 15, 0, 0.5); 
+}
+
 /* Skills Section */
 #skills {
-  padding: 3rem 0;
-  text-align: center;  
-  background-color: #222;
-  background: repeating-linear-gradient(135deg, #000, #000 10px, #111 10px, #111 20px); /* Black with subtle pattern */
-  background-size: 20px 20px; 
-   /* Inset green glow */
-   /* Set text color to white */
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #222; /* Darker gray background */
+    box-shadow: inset 0 0 10px #00ff00; /* Subtler green glow */
 }
 
 #skills h2 {
-    text-align: center;
-    font-size: 2.8rem;
-    margin-bottom: 1.5rem;
     color: #0f0;
-    text-shadow: 0 0 10px #0f0; 
+    text-shadow: 0 0 10px #00ff00;
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; 
     gap: 2rem;
-    max-width: 900px; /* Adjust as needed */
-    margin: 0 auto;
 }
 
 .skill {
-    background-color: #111; /* Darker background */
+    background-color: #111;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 15, 0, 0.5); /* Greenish glow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    box-shadow: 0 4px 8px rgba(0, 15, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 250px; /* Grow, shrink, and have a minimum width of 250px */
 }
 
 .skill:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 15, 0, 0.7); /* Stronger glow on hover */
+    box-shadow: 0 6px 12px rgba(0, 15, 0, 0.7); 
 }
 
 .skill i {
-    font-size: 3rem; /* Larger icon size */
+    font-size: 3rem; 
     margin-bottom: 1rem;
     color: #0f0;
 }
@@ -172,17 +172,26 @@ nav a.active {
 .skill ul {
     list-style: none;
     padding: 0;
-    text-align: left; /* Align list items to the left */
+    text-align: left;
 }
 
 .skill li {
     margin-bottom: 0.5rem;
 }
 
-
 /* Services Section */
 #services {
-    /* ... your styles for the services section */
+    padding: 3rem 0;
+    text-align: center;  
+    background: repeating-linear-gradient(135deg, #222, #222 10px, #333 10px, #333 20px);
+    background-size: 20px 20px; /* Adjust size for a finer or coarser pattern */
+    box-shadow: inset 0 0 10px #00ff00; /* Add an inset green glow for more depth */
+}
+#services h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0; /* Glow effect */
 }
 
 /* Achievements Section */
