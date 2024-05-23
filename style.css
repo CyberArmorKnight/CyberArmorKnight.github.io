@@ -180,20 +180,6 @@ nav a.active {
 
 /* Services Section */
 #services {
-    padding: 3rem 0;
-    text-align: center;  
-    background: repeating-linear-gradient(135deg, #222, #222 10px, #333 10px, #333 20px);
-    background-size: 20px 20px; /* Adjust size for a finer or coarser pattern */
-    box-shadow: inset 0 0 10px #00ff00; /* Add an inset green glow for more depth */
-}
-#services h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: #0f0;
-    text-shadow: 0 0 10px #0f0; /* Glow effect */
-}
-
-#services {
     padding: 50px 0;
     background-color: #1E1E1E;
     color: #fff;
@@ -226,6 +212,7 @@ nav a.active {
     width: calc(33.333% - 40px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s;
+    margin: 10px;
 }
 
 .service-card:hover {
@@ -240,7 +227,6 @@ nav a.active {
 .service-card p {
     margin: 10px 0;
 }
-
 /* Achievements Section */
 #achievements {
   padding: 2rem;
