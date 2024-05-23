@@ -185,6 +185,7 @@ nav a.active {
     padding: 3rem 0;
     text-align: center;
     background-color: #222;
+    box-shadow: inset 0 0 10px #00ff00;
 }
 
 #skills h2 {
@@ -193,10 +194,12 @@ nav a.active {
 }
 
 .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;                     /* Use CSS Grid for better control */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 columns on larger screens, responsive */
     justify-content: center;
     gap: 2rem;
+    max-width: 960px;                 /* Limit max-width for aesthetics */
+    margin: 0 auto;
 }
 
 .skill {
@@ -205,7 +208,6 @@ nav a.active {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 15, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 250px;
 }
 
 .skill:hover {
@@ -221,7 +223,7 @@ nav a.active {
 
 .skill h3 {
     color: #0f0;
-    text-shadow: 0 0 5px #0f0;
+    text-shadow: 0 0 5px #00ff00;
 }
 
 .skill ul {
@@ -232,6 +234,20 @@ nav a.active {
 
 .skill li {
     margin-bottom: 0.5rem;
+    position: relative;    /* For positioning the custom list marker */
+}
+
+.skill li::before {     /* Custom list marker */
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #0f0; /* Green color */
+    border-radius: 50%;
+    margin-right: 8px;
+    position: absolute;
+    left: -15px; /* Adjust position to the left as needed */
+    top: 8px;    /* Adjust vertical position as needed */
 }
 
 /* Services Section */
