@@ -402,40 +402,37 @@ nav a.active {
   background-color: #111;
   color: #0f0;
   padding: 4rem 2rem;
-  text-align: center; /* Center the main heading */
-  min-height: 100vh; /* make sure this section covers the screen */
+  min-height: 100vh; /* Make sure this section covers the screen */
 }
 
 #contact h2 {
   color: #0f0;
   text-shadow: 0 0 10px #0f0;
   margin-bottom: 2rem;
+  grid-column: 1 / span 2; /* Span the heading across both columns */
+  text-align: center;      /* Center the heading text */
 }
 
-/* Contact Container */
 .contact-container {
-  display: flex;          /* Use Flexbox for layout */
-  justify-content: space-around; /* Distribute items evenly */
+  display: grid;               /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Two columns on larger screens, responsive */
+  gap: 2rem;                  /* Gap between the columns */
+  justify-content: center;   /* Center the columns horizontally */
   align-items: flex-start;  /* Align items to the top */
-  flex-wrap: wrap;      /* Allow wrapping to next line on smaller screens */
-  gap: 2rem;           /* Space between contact sections */
-  max-width: 900px;      /* Maximum width of the container */
-  margin: 0 auto;        /* Center the container */
+  max-width: 900px;           /* Maximum width of the container */
+  margin: 0 auto;             /* Center the container */
 }
 
-/* Contact Tabs */
+/* Hide the original tabs as they're not needed */
 .contact-tabs {
-  display: none; /* Hide the original tabs as we are not using them */
+  display: none; 
 }
-
 /* Contact Content (Form and Details) */
 .contact-tab-content {
-  background-color: #222; /* Darker background for better contrast */
+  background-color: #222;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 15, 0, 0.3); /* Subtler green shadow */
-  width: 48%;         /* Each section takes roughly half the width */
-  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 15, 0, 0.3); 
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effects */
 }
 
@@ -444,7 +441,6 @@ nav a.active {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 15, 0, 0.5);
 }
-
 
 /* Contact Headings */
 .contact-tab-content h2, .contact-tab-content h3 {
