@@ -353,7 +353,7 @@ nav a.active {
 
 .social-icons {
     display: flex;
-    justify-content: flex-end; /* Align icons to the right */
+    justify-content: flex-center; /* Align icons to the right */
     margin-top: 1rem;
     gap: 10px; /* Adjust spacing between icons as needed */
 }
