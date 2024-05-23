@@ -113,15 +113,17 @@ nav a.active {
     font-size: 1.2rem; 
 }
 /* Typing and Cursor Animations */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+@keyframes .typing {
+    border-right: 2px solid #fff;
+    animation: blink 0.7s infinite;
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #0f0; }
+@keyframes blink {
+    0% { border-color: #fff; }
+    50% { border-color: transparent; }
+    100% { border-color: #fff; }
 }
+
 
 
 /* About Section */
