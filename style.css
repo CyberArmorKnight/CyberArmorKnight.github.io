@@ -381,33 +381,37 @@ nav a.active {
 
 /* Contact Section */
 #contact {
-    background-color: #111;
-    color: #0f0;
-    padding: 4rem 2rem;
-    text-align: center;
+  background-color: #111;
+  color: #0f0;
+  padding: 4rem 2rem;
+  text-align: center; /* Center the main heading */
 }
 
 #contact h2 {
-    color: #0f0;
-    text-shadow: 0 0 10px #0f0;
-    margin-bottom: 2rem;
+  color: #0f0;
+  text-shadow: 0 0 10px #0f0;
+  margin-bottom: 2rem;
 }
 
 .contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+  display: flex; /* Use flexbox for the main layout */
+  justify-content: space-around; /* Distribute space around the items */
+  align-items: flex-start;  /* Align items to the top */
+  flex-wrap: wrap;      /* Allow wrapping on smaller screens */
+  gap: 2rem;           /* Space between contact sections */
 }
 
+.contact-tabs {
+  display: none; /* Hide the original tabs */
+}
 .contact-tab-content {
-    background-color: #222;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 15, 0, 0.3);
-    width: 100%;
-    max-width: 600px;
-    text-align: left;
+  background-color: #222;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 15, 0, 0.3);
+  width: 48%; /* Adjust width as needed for spacing */
+  max-width: 600px; 
+  text-align: left;
 }
 
 .contact-tab-content h3 {
@@ -480,6 +484,17 @@ nav a.active {
     transform: translateY(-2px);
     text-shadow: 0 0 5px #0f0;
 }
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+  }
+  
+  .contact-tab-content {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
 
 /* Footer */
 footer {
