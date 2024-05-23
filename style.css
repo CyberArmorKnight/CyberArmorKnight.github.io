@@ -56,22 +56,8 @@ nav a.active {
     color: #111;
 }
 
-nav .resume-link {
-    background-color: #0f0;  /* Neon green background */
-    color: #000;            /* Black text */
-    border: none;
-    padding: 0.5rem 1rem;   /* Adjust padding for better click area */
-    border-radius: 5px;
-    text-shadow: none;     /* Remove text shadow for better readability */
-    font-weight: bold;
-}
-
-nav .resume-link:hover {
-    background-color: #00FF00; /* Brighter green on hover */
-    box-shadow: 0 0 10px #0f0;
-}
 /* Content Sections (General) */
-#home, #about, #skills, #services, #achievements, #contact {
+#home, #about, #resume, #skills, #services, #achievements, #contact {
     padding: 60px 2rem; /* Added padding for consistent spacing */
     text-align: center;
     display: flex;
