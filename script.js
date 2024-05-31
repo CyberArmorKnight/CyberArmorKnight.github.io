@@ -18,7 +18,7 @@ filterContainer.addEventListener("click", (event) => {
         event.target.classList.add("active");
         let filterValue = event.target.getAttribute("data-filter");
         galleryItems.forEach((item) => {
-            if (item.classList.contains(filterValue) || filterValue === "all") {
+            if (item.classList.contains(filterValue)) {
                 item.classList.remove("hide");
                 item.classList.add("show");
             }
