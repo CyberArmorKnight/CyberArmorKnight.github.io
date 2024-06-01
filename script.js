@@ -10,26 +10,36 @@ window.addEventListener('scroll', function(){
 let filterContainer = document.querySelector(".gallery-filter");
 let galleryItems = document.querySelectorAll(".gallery-item");
 
+// Function to filter gallery items
+function filterGallery(filterValue) {
+    galleryItems.forEach((item) => {
+        if (item.classList.contains(filterValue)) {
+            item.classList.remove("hide");
+            item.classList.add("show");
+        } else {
+            item.classList.remove("show");
+            item.classList.add("hide");
+        }
+    });
+}
+
 filterContainer.addEventListener("click", (event) => {
-    if (event.target.classList.contains("filter-item")){
-        // deactivates existing active filter item
+    if (event.target.classList.contains("filter-item")) {
+        // Deactivate existing active filter item
         filterContainer.querySelector(".active").classList.remove("active");
-        // activates new filter item
+        // Activate new filter item
         event.target.classList.add("active");
         let filterValue = event.target.getAttribute("data-filter");
-        galleryItems.forEach((item) => {
-            if (item.classList.contains(filterValue)) {
-                item.classList.remove("hide");
-                item.classList.add("show");
-            }
-            else {
-                item.classList.remove("show");
-                item.classList.add("hide");
-            }
-        });
+        filterGallery(filterValue); // Call the filter function
     }
-
 });
+
+// Initial filtering on page load (Hide all but the active filter's items)
+const activeFilter = filterContainer.querySelector(".active");
+if (activeFilter) {
+    const initialFilterValue = activeFilter.getAttribute("data-filter");
+    filterGallery(initialFilterValue);
+}
 
 // Review Carousel
 $('.owl-carousel').owlCarousel({
