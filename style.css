@@ -417,44 +417,67 @@ p,span{
     top: -30px;
     right: -15px;
 }
-.progress-bar .progress-line.html{
-    width: 90%;
-}
-.progress-bar .progress-line.react{
-    width: 75%;
-}
-.progress-bar .progress-line.css{
+.progress-bar .progress-line.SOC{
     width: 95%;
 }
-.progress-bar .progress-line.js{
+.progress-bar .progress-line.VAPT{
+    width: 90%;
+}
+.progress-bar .progress-line.Design{
+    width: 85%;
+}
+.progress-bar .progress-line.TIAnalysis{
     width: 80%;
 }
-.progress-bar .progress-line.python{
+.progress-bar .progress-line.Network{
+    width: 85%;
+}
+.progress-bar .progress-line.Policy{
     width: 75%;
 }
-.progress-bar .progress-line.django{
-    width: 65%;
-}
 
-.progress-bar .progress-line.html::after{
-    content: "90%";
-}
-.progress-bar .progress-line.react::after{
-    content: "75%";
-}
-.progress-bar .progress-line.css::after{
+.progress-bar .progress-line.SOC::after{
     content: "95%";
 }
-.progress-bar .progress-line.js::after{
+.progress-bar .progress-line.VAPT::after{
+    content: "90%";
+}
+.progress-bar .progress-line.Design::after{
+    content: "85%";
+}
+.progress-bar .progress-line.TIAnalysis::after{
     content: "80%";
 }
-.progress-bar .progress-line.python::after{
+.progress-bar .progress-line.Network::after{
+    content: "85%";
+}
+.progress-bar .progress-line.Policy::after{
     content: "75%";
 }
-.progress-bar .progress-line.django::after{
-    content: "65%";
+
+.progress-bar .progress-line.Risk {
+    width: 70%;
 }
 
+.progress-bar .progress-line.Risk::after {
+    content: "70%";
+}
+
+.progress-bar .progress-line.Programming {
+    width: 80%;
+}
+
+.progress-bar .progress-line.Programming::after {
+    content: "80%";
+}
+
+.progress-bar .progress-line.Awareness {
+    width: 85%;
+}
+
+.progress-bar .progress-line.Awareness::after {
+    content: "85%";
+}
 
 
 /* <================= Portfolio =================> */
