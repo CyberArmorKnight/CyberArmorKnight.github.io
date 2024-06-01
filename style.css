@@ -320,6 +320,7 @@ p,span{
 }
 #about .about-list .list-item p{
     margin: 0;
+    width: 11rem;
     padding-left: 1rem;
 }
 #about .btn{
@@ -333,7 +334,8 @@ p,span{
     border-color: var(--bg-color-2);
 }
 .service-card .card-content{
-    width: 22rem;
+    width: 25rem;
+    height: 27rem;
     padding: 55px 40px;
     margin: 15px;
     background-color: #131416;
@@ -394,7 +396,7 @@ p,span{
     border-left-color: var(--main-color);
 }
 #skills{
-    padding-bottom: 100px;
+    padding-bottom: 00px;
 }
 #skills .heading-wrapper{
     padding-top: 50px;
