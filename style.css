@@ -683,12 +683,26 @@ form .form-row{
     font-size: 15px;
 }
 /* <================= Footer =================> */
-footer{
+footer {
     background-color: black;
-    height: 3rem;
+    /* Responsive height */
+    min-height: 3rem;
+    /* Ensure a minimum height */
+    padding: 1rem 0;
+    /* Add padding for better spacing */
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    /* Allow content to wrap onto new lines */
+}
+
+/* Optional: Styles for footer content */
+footer * {
+    /* Target all elements within the footer */
+    margin: 0.5rem;
+    /* Add margin for spacing between elements */
 }
 
 /* <================= Responsive =================> */
